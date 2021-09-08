@@ -1826,7 +1826,7 @@ if game.CoreGui:FindFirstChild("Library") then
   end
   return Tabs
  end
-local win = VLib:Window("PataveHub", "Script Blox Fruit", Color3.fromRGB(252, 83, 83))
+local win = VLib:Window("PataveHub", "Blox Fruit", Color3.fromRGB(252, 83, 83))
        local AutoFram = win:Tab("Auto Farm")
        OldWorld = false
        newworld = false
