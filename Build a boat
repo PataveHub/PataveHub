@@ -1,0 +1,45 @@
+_G.PATAVE|HUB = true
+  while _G.PATAVE|HUB do wait()
+  
+  local TweenService = game:GetService("TweenService")
+  local Me = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+  
+  ---Noclips---
+  
+  noclip = _G.PATAVE|HUBb
+  game:GetService('RunService').Stepped:connect(function()
+  if noclip then
+  game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+      end
+  end)
+  
+  
+  ---Tween---
+  local Info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+  local New = {}
+  New.CFrame = CFrame.new(-51.5656, 65, 1369.09)
+  local Tween = TweenService:Create(Me, Info, New)
+  
+  local aMe = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+  local aInfo = TweenInfo.new(25, Enum.EasingStyle.Linear)
+  local aNew = {}
+  aNew.CFrame = CFrame.new(-51.5656, 65, 8500.09)
+  local aTween = TweenService:Create(aMe, aInfo, aNew)
+  
+  
+  local bMe = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+  local bInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+  local bNew = {CFrame = CFrame.new(-55.7065, -358.74, 9492.36)}
+  local bTween = TweenService:Create(bMe, bInfo, bNew)
+  
+  
+  ---Plays---
+  noclip = true
+  Tween:Play()
+  wait(1)
+  aTween:Play()
+  wait(25)
+  bTween:Play()
+  wait(20)
+  noclip = false
+  end
