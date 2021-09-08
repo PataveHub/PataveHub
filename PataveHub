@@ -2406,12 +2406,12 @@ local win = VLib:Window("PATAVE|HUB", "Blox Fruit", Color3.fromRGB(252, 83, 83))
               end
           end
       end)
-       AutoFram:Toggle("Auto Buy Legebdary Sword",false,function(Value)
-          LegebdarySword = Value    
+       AutoFram:Toggle("Auto Buy Legendary Sword",false,function(Value)
+          LegendarySword = Value    
        end)
        spawn(function()
           while wait(.1) do
-             if LegebdarySword then
+             if LegendarySword then
                 local args = {
                    [1] = "LegendarySwordDealer",
                    [2] = "2"
